@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import QuestionCard from './components/QuestionCard';
-import { GlobalStyle , Wrapper} from './App.style';
+import Todo from './components/Todo';
+
+import { GlobalStyle , Wrapper} from './style/App.style';
 
 import { Difficulty, fetchQuizQuestions, QuestionState } from './api/API';
 
@@ -61,6 +63,7 @@ function App() {
   return (
     <>
     <GlobalStyle />
+    <Todo />
     <Wrapper>
       <h1>Quiz</h1>
       { gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
